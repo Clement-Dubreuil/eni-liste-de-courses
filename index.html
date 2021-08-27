@@ -1,0 +1,102 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Liste de courses</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+
+    <style>
+        .barre {
+            text-decoration: line-through;
+        }
+    </style>
+
+
+</head>
+<body>
+    <div class="container">
+        <div class="row" id="app">
+            <div class="offset-3 col-6">
+                <h1>Liste de courses</h1>
+                <br>
+
+                <form action="" method="POST" class="form-inline">
+
+                    <input name="name" class="form-control" required="">
+
+                    <div class="col-2">
+                        <button type="submit" class="btn btn-success">
+                            <i class="fa fa-plus"></i>
+                        </button>
+                    </div>
+                </form>
+
+                <br>
+
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Article</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="">
+                        <td class="">Jambon</td>
+                        <td>
+                            <a href="" class="btn btn-success">
+                                <i class="fa fa-check"></i>
+                            </a>
+                            <a href="" class="btn btn-danger del"><i
+                                    class="fa fa-trash"></i></a>
+                        </td>
+                    </tr>
+                    <tr class="table-danger">
+                        <td class="barre">Champignons</td>
+                        <td>
+                            <a href="" class="btn btn-primary">
+                                <i class="fas fa-times"></i>
+                            </a>
+                            <a href="" class="btn btn-danger del"><i
+                                    class="fa fa-trash"></i></a>
+                        </td>
+                    </tr>
+                    <tr class="table-danger">
+                        <td class="barre">Yaourts</td>
+                        <td>
+                            <a href="" class="btn btn-primary">
+                                <i class="fas fa-times"></i>
+                            </a>
+                            <a href="" class="btn btn-danger del"><i
+                                    class="fa fa-trash"></i></a>
+                        </td>
+                    </tr>
+                    <tr class="">
+                        <td class="">Lait</td>
+                        <td>
+                            <a href="" class="btn btn-success">
+                                <i class="fa fa-check"></i>
+                            </a>
+                            <a href="" class="btn btn-danger del"><i
+                                    class="fa fa-trash"></i></a>
+                        </td>
+                    </tr>
+                    <tr class="">
+                        <td class="">Oeufs</td>
+                        <td>
+                            <a href="" class="btn btn-success">
+                                <i class="fa fa-check"></i>
+                            </a>
+                            <a href="" class="btn btn-danger del"><i
+                                    class="fa fa-trash"></i></a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
