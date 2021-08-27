@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste de courses{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row" id="app">
+            <div class="offset-3 col-6">
+                <h1>Liste de courses</h1>
+                <br />
+
+                    <form action="{{ path('brutAddArticle') }}" method="POST" class="form-inline">
+
+                        <input name="name" class="form-control" required/>
+
+                        <div class="col-2">
+                            <button type="submit" class="btn btn-success">
+                                <i class="fa fa-plus"></i>
+                            </button>
+                        </div>
+                    </form>
+
+                <br />
+
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Article</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for article in listeArticles %}
+                            <tr class="{{ article.isChecked ? 'table-danger' }}">
+                                <td class="{{ article.isChecked ? 'barre' }}">{{ article.name }}</td>
+                                <td>
+                                    <a href="{{ path('checkArticle', {id: article.id}) }}" class="btn {{ article.isChecked ? 'btn-primary' : 'btn-success' }}">
+                                        {{ article.isChecked ? '<i class="fas fa-times"></i>' : '<i class="fa fa-check"></i>' }}
+                                    </a>
+                                    <a href="{{ path('deleteArticle', {id: article.id}) }}" class="btn btn-danger del"><i class="fa fa-trash"></i></a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}
